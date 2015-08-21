@@ -1,0 +1,10 @@
+# to enable rewrite option configure the following:
+# 1. Open AppServ\Apache2.2\conf\httpd.conf
+# 2. Discoment the following library: LoadModule rewrite_module modules/mod_rewrite.so
+# 3. Restar the Appase server
+
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z0-9+]*)$ Controllers.php?name=$1 [nc,qsa]
+

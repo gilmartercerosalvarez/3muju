@@ -1,0 +1,25 @@
+
+<table class="table table-bordered" ng-controller="ChatController as chat">
+	<tr>
+		<td>Messages: <b>{{chat.sessions[chat.userId].userName}}</b></td>
+		<td>User</td>
+	</tr>
+	<tr>
+		<td>
+			<div ng-repeat="msg in chat.sessions[chat.userId].listMessages">
+				<b>{{msg.content}}</b> {{msg.hour}}
+			</div>
+		</td>
+		<td>
+			<div ng-repeat="user in chat.sessions">
+				<a ng-click="chat.openUserSession(user.id)">{{user.userName}}</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td><input ng-model="chat.newMessage"></td>
+		<td><button class="btn" ng-click="chat.updateListMessage()">Send</button></td>
+	</tr>
+
+</table>
+
