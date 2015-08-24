@@ -1,12 +1,12 @@
 (function(){
-	'use strict';
+    'use strict';
 
-	angular
-		.module('tresmuju')
-		.run([RunApplication]);
+    angular
+        .module('tresmuju')
+        .run([RunApplication]);
 
-	function RunApplication(){
-		console.log('The application is up');
-	}
+    function RunApplication(){
+        console.log('The application is up');
+    }
 
 })();

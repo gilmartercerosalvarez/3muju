@@ -1,16 +1,16 @@
 (function (){
-	'use strict';
+    'use strict';
 
-	angular.module('Services', []);
-	angular.module('Chat', []);
-	angular.module('Team', []);
-	
-	angular.module('tresmuju', [
-			'ui.router',
-			'Services',
-			'Chat',
-			'Team'
+    angular.module('Services', []);
+    angular.module('Chat', []);
+    angular.module('Team', []);
+    
+    angular.module('tresmuju', [
+            'ui.router',
+            'Services',
+            'Chat',
+            'Team'
 
-	]);
+    ]);
 
 })();
