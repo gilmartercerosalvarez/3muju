@@ -1,7 +1,7 @@
 <?php
 require_once("ConnectionManager.php");
 
-	class CustomerManager
+	class TeamManager
 	{
 		private $connection;
 
@@ -10,7 +10,7 @@ require_once("ConnectionManager.php");
 			$this->connection = new ConnectionManager();
 		}
 
-		public function getCustomers()
+		public function getTeams()
 		{	
 			$query="SELECT distinct c.customerNumber, 
 									c.customerName, 
@@ -24,11 +24,11 @@ require_once("ConnectionManager.php");
 			return $tuples;
 		}
 
-		public function getCustomer($id)
+		public function getTeam($idTeam)
 		{	
 			$query="SELECT distinct c.customerName
 					FROM angularcode_customers c 
-					WHERE c.customerNumber = $id";
+					WHERE c.customerNumber = $idTeam";
 
 			$tuples = $this->connection->runQuery($query);
 			return $tuples;
